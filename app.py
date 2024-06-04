@@ -1,16 +1,25 @@
 import numpy as np
+import matplotlib
+matplotlib.use('TkAgg')
+import matplotlib.pyplot as plt
+import pandas as pd
+import math
+
 # print(np.pi)
-x=4
-y=6
-z=9
-t =(x/y)
-if t != 2:
-    print('t is not 2')
-else:
-    print('It is 2')
-r=6**2
-f=(r*z)
-if f > t:
-    print("f is greated than t")
-else:
-    print('t is greater than f')
+
+print("Enter Values from 3D vector for magnitude")
+x = float(input('Enter X value: '))
+y = float(input('Enter Y value: '))
+z = float(input('Enter Z value: '))
+x = x**2
+y = y**2
+z = z**2
+t = x+y+z
+print(math.sqrt(t))
+
+
+# p = 1,3,5,3,5,2,6,8,6,8
+# q = 1,1,1,2,2,1,2,1,1,1
+
+# plt.bar(p,q)
+# plt.show()
