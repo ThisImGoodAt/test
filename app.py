@@ -4,18 +4,51 @@ matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import pandas as pd
 import math
+from fractions import Fraction
 
-# print(np.pi)
 
-print("Enter Values from 3D vector for magnitude")
-x = float(input('Enter X value: '))
-y = float(input('Enter Y value: '))
-z = float(input('Enter Z value: '))
-x = x**2
-y = y**2
-z = z**2
-t = x+y+z
-print(math.sqrt(t))
+def Vector():
+    print("Enter values for 3D vector for magnitude")
+    x = float(input('Enter X value: '))
+    y = float(input('Enter Y value: '))
+    z = float(input('Enter Z value: '))
+    x = x**2
+    y = y**2
+    z = z**2
+    t = x+y+z
+    if t<0: 
+        print('ERROR')
+    else:
+        print(math.sqrt(t))
+
+
+def Angle():
+    print("Enter values for 3D vector A ")
+    x = float(input('Enter X value: '))
+    y = float(input('Enter Y value: '))
+    z = float(input('Enter Z value: '))
+    print("Enter values for 3D vector B ")
+    t = float(input('Enter X value: '))
+    r = float(input('Enter Y value: '))
+    e = float(input('Enter Z value: '))
+    d = x*t+y*r+z*e
+    a = (x**2)+(y**2)+(z**2)
+    b = (t**2)+(r**2)+(e**2)
+
+
+
+
+calcq = input('Chose calculator type: Vector "Magnitude" or "Angle" between 2 vectors ')
+if calcq == 'Magnitude':
+    Vector()
+elif calcq == 'magnitude':
+    Vector()
+elif calcq == 'Angle':
+    Angle()
+elif calcq == 'angle':
+    Angle()
+else:
+    print('Not an option.')
 
 
 # p = 1,3,5,3,5,2,6,8,6,8
