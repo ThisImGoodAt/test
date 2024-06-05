@@ -34,18 +34,19 @@ def Angle():
     d = x*t+y*r+z*e
     a = (x**2)+(y**2)+(z**2)
     b = (t**2)+(r**2)+(e**2)
+    c = (math.sqrt(a))*(math.sqrt(b))
+    g = (math.acos(d/c))
+    f = (g*180/math.pi)
+    print(f)
 
-
-
-
-calcq = input('Chose calculator type: Vector "Magnitude" or "Angle" between 2 vectors ')
-if calcq == 'Magnitude':
+calcq = input('Chose calculator type: Vector Magnitude "M" or Angle "A" between 2 vectors ')
+if calcq == 'M':
     Vector()
-elif calcq == 'magnitude':
+elif calcq == 'm':
     Vector()
-elif calcq == 'Angle':
+elif calcq == 'A':
     Angle()
-elif calcq == 'angle':
+elif calcq == 'a':
     Angle()
 else:
     print('Not an option.')
