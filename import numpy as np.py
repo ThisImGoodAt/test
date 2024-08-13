@@ -40,23 +40,27 @@ def Angle():
     h = round(f,1)
     print("Angle between vectors A and B is:", f, "degrees")
     print("Angle to 2 decimal places:", h, "degrees")
-
-calcq = input('Chose calculator type: Vector Magnitude "M" or Angle "A" between 2 vectors ')
-if calcq == 'M':
-        Magnitude()
-elif calcq == 'Magnitude':
-        Magnitude()
-elif calcq == 'magnitude':
-        Magnitude()
-elif calcq == 'm':
-        Magnitude()
-elif calcq == 'A':
-        Angle()
-elif calcq == 'a':
-        Angle()
-elif calcq == 'angle':
-        Angle()
-elif calcq == 'Angle':
-        Angle()
-else:
-        print("Sorry, that was an invalid command!")
+def Vector(): 
+    print("Enter values for Starting Point ")
+    x = int(input('X value: '))
+    y = int(input('Y value: '))
+    z = int(input('Z value: '))
+    print("Enter values for Ending Point ")
+    t = int(input('X value: '))
+    r = int(input('Y value: '))
+    e = int(input('Z value: '))
+    d = (t-x)
+    f = (r-y)
+    h = (e-z)
+    print("Vector between two points is",d,",",f,",",h,)
+flag=0
+while flag == 0:
+        calcq = input('Chose calculator type: Vector Magnitude "M", Angle "A" between 2 vectors or Finding vector between two points "V" ')
+        if calcq == 'M' or calcq=='m' or calcq == 'magnitude' or calcq == 'Magnitude':
+                Magnitude();flag=1
+        elif calcq == 'A' or calcq == 'a' or calcq == 'angle' or calcq == 'Angle':
+                Angle();flag=1
+        elif calcq == "v" or calcq =='V' or calcq == 'Vector' or calcq == 'vector':
+                Vector();flag=1
+        else:
+           print("Sorry, that was an invalid command!")
